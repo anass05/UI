@@ -83,6 +83,9 @@ export default createGlobalStyle`
   .yellow{
     color: #FBCE5D;
   }
+  .dark{
+    color: #3F465D;
+  }
   .disabled{
     color: #222B45AD;
   }
@@ -106,6 +109,10 @@ export default createGlobalStyle`
   }
   .col-right{
     justify-content: flex-end;
+  }
+  .ant-tooltip, .ant-tooltip-inner{
+    padding: 0;
+    border-radius: 8px;
   }
   .ant-input-affix-wrapper{
     background-color: #F5F7FB;

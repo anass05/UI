@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from 'antd';
+import { Col, Row, Tooltip } from 'antd';
 import Text from '../../Text';
 import { Activity, Diagnosis, HeaderContainer } from '../styles';
 import {
@@ -9,6 +9,9 @@ import {
   FieldTimeOutlined,
   UserOutlined
 } from '@ant-design/icons';
+import Member from '../Popups/Member';
+import ActivityPopup from '../Popups/Activity';
+import DiagnosisPopup from '../Popups/Diagnosis';
 
 interface Error {
   ID: string;
@@ -61,14 +64,22 @@ const Header: React.FC<Props> = ({
         </Col>
         <Col xl={3} className={'col-middle'}>
           <UserOutlined className="small grey-icon" />
-          <Text
-            color={'#222B45'}
-            size={14}
-            weight={400}
-            height={20}
-            text={member}
-            marginLeft={7}
-          />
+          <Tooltip
+            placement="bottomRight"
+            title={<Member />}
+            color={'transparent'}
+          >
+            <div>
+              <Text
+                color={'#222B45'}
+                size={14}
+                weight={400}
+                height={20}
+                text={member}
+                marginLeft={7}
+              />
+            </div>
+          </Tooltip>
         </Col>
         <Col xl={5}>
           <Text
@@ -100,15 +111,21 @@ const Header: React.FC<Props> = ({
             text={diagnosis}
             marginRight={7}
           />
-          <Diagnosis>
-            <Text
-              color={'#04B7E2'}
-              size={14}
-              weight={400}
-              height={20}
-              text={'ICD10 CM'}
-            />
-          </Diagnosis>
+          <Tooltip
+            placement="bottomRight"
+            title={<DiagnosisPopup />}
+            color={'transparent'}
+          >
+            <Diagnosis>
+              <Text
+                color={'#04B7E2'}
+                size={14}
+                weight={400}
+                height={20}
+                text={'ICD10 CM'}
+              />
+            </Diagnosis>
+          </Tooltip>
         </Col>
         <Col xl={6} className={'col-middle'}>
           <Text
@@ -119,15 +136,21 @@ const Header: React.FC<Props> = ({
             text={activity}
             marginRight={7}
           />
-          <Activity>
-            <Text
-              color={'#0473E2'}
-              size={14}
-              weight={400}
-              height={20}
-              text={'CPT4'}
-            />
-          </Activity>
+          <Tooltip
+            placement="bottomRight"
+            title={<ActivityPopup />}
+            color={'transparent'}
+          >
+            <Activity>
+              <Text
+                color={'#0473E2'}
+                size={14}
+                weight={400}
+                height={20}
+                text={'CPT4'}
+              />
+            </Activity>
+          </Tooltip>
         </Col>
         <Col xl={2}>
           <Row align={'middle'}>

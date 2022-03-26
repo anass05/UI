@@ -18,3 +18,21 @@ export const IconContainer = styled.div`
   background-color: #f5f7fb;
   border-radius: 10px;
 `;
+
+export const PopupContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  width: 182px;
+`;
+
+export const ItemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+`;

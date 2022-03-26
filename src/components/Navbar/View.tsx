@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from 'antd';
+import { Col, Row, Tooltip } from 'antd';
 import Text from 'components/Text';
 import SearchInput from 'components/SearchInput';
 import Logo from 'assets/images/logo.png';
@@ -11,6 +11,7 @@ import {
 } from '@ant-design/icons';
 import { IconContainer, NavRow } from './styles';
 import Button from 'components/Button';
+import Popup from './Popup';
 
 const Navbar: React.FC = ({}) => {
   return (
@@ -29,12 +30,18 @@ const Navbar: React.FC = ({}) => {
         </Row>
       </Col>
       <Col xl={{ span: 6, offset: 1 }}>
-        <NavRow>
-          <SearchInput />
-          <IconContainer>
-            <FilterOutlined className="grey-icon" />
-          </IconContainer>
-        </NavRow>
+        <Tooltip
+          placement="bottomRight"
+          title={<Popup />}
+          color={'transparent'}
+        >
+          <NavRow>
+            <SearchInput />
+            <IconContainer>
+              <FilterOutlined className="grey-icon" />
+            </IconContainer>
+          </NavRow>
+        </Tooltip>
       </Col>
       <Col xl={{ span: 9 }}>
         <Row align={'middle'} justify={'end'}>
