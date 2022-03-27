@@ -18,6 +18,7 @@ const Screen: React.FC = () => {
         <Sider breakpoint={'sm'} className={'sider'}>
           <SiderContent download={<Download />}>
             <SiderItem
+              opened
               title={'GPH-UAE-JAN22-OP17'}
               claims={[
                 'C20076578',
@@ -34,10 +35,96 @@ const Screen: React.FC = () => {
               errors={'6 Claims • 22 Errors'}
               denial={'72,020.00'}
             />
+            <SiderItem
+              title={'GPH-UAE-JAN22-OP17'}
+              claims={['C20076578', 'C20076579', 'C20076578', 'C20076579']}
+              count={'30 Claims'}
+              amount={'274,020.00 AED'}
+              errors={'6 Claims • 22 Errors'}
+              denial={'72,020.00'}
+            />
+            <SiderItem
+              title={'GPH-UAE-JAN22-OP17'}
+              claims={[
+                'C20076578',
+                'C20076578',
+                'C20076579',
+                'C20076578',
+                'C20076579',
+                'C20076578',
+                'C20076579'
+              ]}
+              count={'30 Claims'}
+              amount={'274,020.00 AED'}
+              errors={'6 Claims • 22 Errors'}
+              denial={'72,020.00'}
+            />
           </SiderContent>
         </Sider>
         <Content className={'content'}>
           <Title />
+          <Claim
+            id={'C20076578'}
+            date={'31 Jan ’21, 4:06 PM'}
+            member={'98562'}
+            encounter={'21 Feb ’19, • 21 Feb ’19,'}
+            diagnosis={'5'}
+            activity={'3'}
+            price={'4,280.00'}
+            errors={[
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              }
+            ]}
+          />
+          <Claim
+            id={'C20076578'}
+            date={'31 Jan ’21, 4:06 PM'}
+            member={'98562'}
+            encounter={'21 Feb ’19, • 21 Feb ’19,'}
+            diagnosis={'5'}
+            activity={'3'}
+            price={'4,280.00'}
+            errors={[
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              },
+              {
+                ID: 'RULE_SUBMISSION_EXPIRED',
+                ABV: 'TIME-001',
+                description: 'DHA time limit for submission has expired'
+              }
+            ]}
+          />
           <Claim
             id={'C20076578'}
             date={'31 Jan ’21, 4:06 PM'}

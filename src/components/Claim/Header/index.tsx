@@ -27,6 +27,7 @@ type Props = {
   activity: string;
   price: string;
   errors: Error[];
+  setDrawerVisible: (e) => void;
 };
 const Header: React.FC<Props> = ({
   id,
@@ -36,7 +37,8 @@ const Header: React.FC<Props> = ({
   diagnosis,
   activity,
   price,
-  errors
+  errors,
+  setDrawerVisible
 }) => {
   return (
     <HeaderContainer>
@@ -177,7 +179,11 @@ const Header: React.FC<Props> = ({
             />
           </Row>
         </Col>
-        <Col xl={1} className={'col-middle col-right'}>
+        <Col
+          xl={1}
+          className={'col-middle col-right'}
+          onClick={() => setDrawerVisible(true)}
+        >
           <EllipsisOutlined className="large grey rotated" />
         </Col>
       </Row>

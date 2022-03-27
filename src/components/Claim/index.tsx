@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Content from './Content';
-import Collapsible from 'react-collapsible';
 import { CollapsibleContainer } from './styles';
+import { Drawer } from 'antd';
+import DrawerContent from '../DrawerContent';
 
 interface Error {
   ID: string;
@@ -29,26 +30,30 @@ const Claim: React.FC<Props> = ({
   price,
   errors
 }) => {
+  const [drawerVisible, setDrawerVisible] = useState(false);
   return (
     <CollapsibleContainer>
-      <Collapsible
-        transitionTime={300}
-        easing={'ease'}
-        trigger={
-          <Header
-            id={id}
-            date={date}
-            member={member}
-            encounter={encounter}
-            diagnosis={diagnosis}
-            activity={activity}
-            price={price}
-            errors={errors}
-          />
-        }
+      <Header
+        id={id}
+        date={date}
+        member={member}
+        encounter={encounter}
+        diagnosis={diagnosis}
+        activity={activity}
+        price={price}
+        errors={errors}
+        setDrawerVisible={setDrawerVisible}
+      />
+      <Content errors={errors} />
+      <Drawer
+        visible={drawerVisible}
+        onClose={() => setDrawerVisible(false)}
+        placement="right"
+        headerStyle={{ display: 'none' }}
+        contentWrapperStyle={{ width: 544 }}
       >
-        <Content errors={errors} />
-      </Collapsible>
+        <DrawerContent />
+      </Drawer>
     </CollapsibleContainer>
   );
 };

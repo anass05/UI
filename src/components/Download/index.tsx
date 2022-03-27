@@ -4,9 +4,12 @@ import { CloudDownloadOutlined } from '@ant-design/icons';
 import { Row } from 'antd';
 import Text from '../Text';
 
-const Download: React.FC = ({}) => {
+interface Props {
+  isSider?: boolean;
+}
+const Download: React.FC<Props> = ({ isSider }) => {
   return (
-    <Container>
+    <Container isSider={isSider}>
       <CloudDownloadOutlined className="large purple" />
       <Row>
         <Text

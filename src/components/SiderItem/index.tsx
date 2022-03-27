@@ -22,6 +22,7 @@ type Props = {
   amount: string;
   errors: string;
   denial: string;
+  opened?: boolean;
 };
 type itemProps = {
   label: string;
@@ -47,11 +48,13 @@ const SiderItem: React.FC<Props> = ({
   count,
   amount,
   errors,
-  denial
+  denial,
+  opened
 }) => {
   return (
     <Container>
       <Collapsible
+        open={opened}
         trigger={
           <SpacedRow>
             <Row>

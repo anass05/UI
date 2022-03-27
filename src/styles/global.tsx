@@ -86,6 +86,9 @@ export default createGlobalStyle`
   .dark{
     color: #3F465D;
   }
+  .blue {
+    color:rgb(86,135,194);
+  }
   .disabled{
     color: #222B45AD;
   }
@@ -114,6 +117,10 @@ export default createGlobalStyle`
     padding: 0;
     border-radius: 8px;
   }
+  .ant-tooltip{    
+    width: auto !important;
+    max-width: initial !important;
+  }
   .ant-input-affix-wrapper{
     background-color: #F5F7FB;
     border-color: #F5F7FB;
@@ -126,6 +133,84 @@ export default createGlobalStyle`
     .ant-input{
       background-color: #F5F7FB;
       color:#868B9A;
+    }
+  }
+  .ant-drawer-body{
+    padding: 38px;
+  }
+  .ant-switch{
+    background-color: #E6F2EF;
+  }
+  .ant-switch-checked{
+    background-color: #00D6A6;
+  }
+  .purple-switch{
+    background-color: #6135FB;
+  }
+
+  .ant-radio .ant-radio-inner{
+    border-color: #6135FB !important ;
+    border-width: 2px;
+  } 
+  .ant-radio-disabled .ant-radio-inner{
+    border-color: #C5C4C7 !important ;
+  }
+  .ant-radio-checked .ant-radio-inner{
+    border-color: #6135FB !important ;
+    border-width: 5px;
+  }
+  .ant-radio-checked .ant-radio-inner:after{
+    background-color: white;
+  }
+  .ant-radio-disabled .ant-radio-inner{
+    background-color: white;
+  }
+  .ant-input{
+    background-color: #FAFBFD;
+    border-color: transparent;
+    border-bottom: solid 1px #D2DDEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 11px 12px;
+    color:#696F81CC;
+    &::placeholder {
+      font-family: Poppins,serif;
+      font-size: 14px;
+      line-height: 21px;
+      color:#696F81CC;
+      font-weight: 400;
+    }
+  }
+  .ant-select{
+    background-color: #FAFBFD;
+    border-color: transparent;
+    border-bottom: solid 1px #D2DDEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 6px 12px;
+    color:#696F81CC;
+    .ant-select-selector{
+      padding: 0!important;
+      border-width: 0!important;
+      background-color: transparent !important;
+    }
+  }
+  .ant-picker{
+    background-color: #FAFBFD;
+    border-color: transparent;
+    border-bottom: solid 1px #D2DDEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 11px 12px;
+    color:#696F81CC;
+    width: 70%;
+    .ant-picker-input{
+      padding: 0!important;
+      border-width: 0!important;
+      background-color: transparent !important;
+    }
+    .ant-picker-clear{
+      color: red !important;
     }
   }
   .Collapsible{
