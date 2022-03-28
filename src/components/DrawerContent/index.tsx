@@ -17,6 +17,7 @@ import { Input } from 'antd';
 import Select from '../Select';
 import DatePicker from '../DatePicker';
 import Activity from './Activity';
+import FloatingAction from './FloatingAction';
 
 const { TextArea } = Input;
 
@@ -104,6 +105,7 @@ const DrawerContent: React.FC = ({}) => {
         />
         <Activity />
       </Section>
+      <FloatingAction />
     </Container>
   );
 };

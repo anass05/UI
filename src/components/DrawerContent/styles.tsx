@@ -67,3 +67,18 @@ export const SpacedRow = styled.div`
   justify-content: space-between;
   width: 100%;
 `;
+
+export const FloatingContainer = styled.div`
+  margin: 0 12px 16px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 24px);
+  position: absolute;
+  background-color: #6135fb;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  padding: 12px;
+`;
