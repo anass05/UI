@@ -4,6 +4,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   margin-bottom: 14px;
+  min-width: 1215px;
 `;
 
 export const ClaimContainer = styled.div`
@@ -21,6 +22,7 @@ export const ContentContainer = styled.div`
 `;
 export const CollapsibleContainer = styled.div`
   margin-bottom: 28px;
+  min-width: 1215px;
 `;
 
 export const HeaderContainer = styled.div`

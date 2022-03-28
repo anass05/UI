@@ -17,7 +17,7 @@ const Content: React.FC<Props> = ({ errors }) => {
       {errors.map((el, i) => (
         <ContentContainer key={`${i}-row`}>
           <Row>
-            <Col xl={5}>
+            <Col lg={5}>
               <Row align={'middle'}>
                 <Tag>
                   <Text
@@ -38,7 +38,7 @@ const Content: React.FC<Props> = ({ errors }) => {
                 />
               </Row>
             </Col>
-            <Col xl={17}>
+            <Col lg={17}>
               <Row align={'middle'}>
                 <Error>
                   <Text

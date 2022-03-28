@@ -216,6 +216,9 @@ export default createGlobalStyle`
   .Collapsible{
     width: 100%;
   }
+  .full-width{
+    width: 100%;
+  }
   ::-webkit-scrollbar {
     width: 10px !important;
     height: 10px !important;

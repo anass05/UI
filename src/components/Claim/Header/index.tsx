@@ -42,8 +42,8 @@ const Header: React.FC<Props> = ({
 }) => {
   return (
     <HeaderContainer>
-      <Row>
-        <Col xl={4}>
+      <Row className={'full-width'}>
+        <Col sm={4}>
           <Text
             color={'#222B45'}
             size={14}
@@ -64,7 +64,7 @@ const Header: React.FC<Props> = ({
             />
           </Row>
         </Col>
-        <Col xl={3} className={'col-middle'}>
+        <Col sm={3} className={'col-middle'}>
           <UserOutlined className="small grey-icon" />
           <Tooltip
             placement="bottomRight"
@@ -83,7 +83,7 @@ const Header: React.FC<Props> = ({
             </div>
           </Tooltip>
         </Col>
-        <Col xl={5}>
+        <Col sm={5}>
           <Text
             color={'#222B45'}
             size={14}
@@ -104,7 +104,7 @@ const Header: React.FC<Props> = ({
             />
           </Row>
         </Col>
-        <Col xl={3} className={'col-middle'}>
+        <Col sm={3} className={'col-middle'}>
           <Text
             color={'#222B45'}
             size={14}
@@ -129,7 +129,7 @@ const Header: React.FC<Props> = ({
             </Diagnosis>
           </Tooltip>
         </Col>
-        <Col xl={6} className={'col-middle'}>
+        <Col sm={6} className={'col-middle'}>
           <Text
             color={'#222B45'}
             size={14}
@@ -154,7 +154,7 @@ const Header: React.FC<Props> = ({
             </Activity>
           </Tooltip>
         </Col>
-        <Col xl={2}>
+        <Col sm={2}>
           <Row align={'middle'}>
             <ExclamationCircleOutlined className="small red mb" />
             <Text
@@ -180,7 +180,7 @@ const Header: React.FC<Props> = ({
           </Row>
         </Col>
         <Col
-          xl={1}
+          sm={1}
           className={'col-middle col-right'}
           onClick={() => setDrawerVisible(true)}
         >

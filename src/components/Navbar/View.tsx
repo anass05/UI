@@ -16,7 +16,7 @@ import Popup from './Popup';
 const Navbar: React.FC = ({}) => {
   return (
     <Row align={'middle'} className={'header-row'}>
-      <Col xl={{ span: 8 }}>
+      <Col lg={{ span: 8 }} sm={{ span: 12 }}>
         <Row align={'middle'}>
           <img src={Logo} width={38} />
           <Text
@@ -29,7 +29,7 @@ const Navbar: React.FC = ({}) => {
           />
         </Row>
       </Col>
-      <Col xl={{ span: 6, offset: 1 }}>
+      <Col lg={{ span: 6, offset: 1 }} sm={{ span: 12 }}>
         <Tooltip
           placement="bottomRight"
           title={<Popup />}
@@ -43,7 +43,7 @@ const Navbar: React.FC = ({}) => {
           </NavRow>
         </Tooltip>
       </Col>
-      <Col xl={{ span: 9 }}>
+      <Col lg={{ span: 9 }} sm={{ span: 0 }}>
         <Row align={'middle'} justify={'end'}>
           <Button
             text={'Refresh'}
